@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Vue.js 3 - Lists, Conditionals, and Computed Properties</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-full grid place-items-center">
+    <div id="app">
+        <div class="mb-10">
+            <h2 class="font-bold text-center mb-4">
+                In Progress 
+                <span class="text-sm">
+                    ({{ inProgressAssignments.length }})
+                </span>
+            </h2>
+            <ul>
+                <li
+                    v-if="inProgressAssignments.length"
+                    v-for="assignment in inProgressAssignments"
+                    :key="assignment.id"
+                >
+                    <input type="checkbox" v-model="assignment.complete">
+                    {{ assignment.name }}
+                </li>
+                <li v-else>
+                    <p class="text-center text-sm text-red-600">
+                        No data found!
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="font-bold text-center mb-4">
+                Done
+                <span class="text-sm"></span>
+                    ({{ completedAssignments.length }})
+                </span>
+            </h2>
+            <ul>
+                <li
+                    v-if="completedAssignments.length"
+                    v-for="assignment in completedAssignments"
+                    :key="assignment.id"
+                >
+                    <input type="checkbox" v-model="assignment.complete">
+                    {{ assignment.name }}
+                </li>
+                <li v-else>
+                    <p class="text-center text-sm text-red-600">
+                        No data found!
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let app = {
+            data() {
+                return {
+                    assignments: [
+                        { id:1, name: 'Read from page 24 to page 28', complete: false},
+                        { id:2, name: 'Finish Math quiz', complete: false },
+                        { id:3, name: 'Write a little story about yourself in English', complete: false },
+                        { id: 4, name: 'Prepare a presentation for the Geography class', complete: true },
+                    ]
+                }
+            },
+
+            computed: {
+                inProgressAssignments() {
+                    return this.assignments.filter(assignment => ! assignment.complete)
+                },
+
+                completedAssignments() {
+                    return this.assignments.filter(assignment => assignment.complete)
+                }
+            }
+        };
+
+        Vue.createApp(app).mount('#app');
+    </script>
+</body>
+
+</html>
