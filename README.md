@@ -15,3 +15,5 @@ This is a Vue.js 3 course by Jeffrey from Laracasts
 ##### 5. One Vue Component Per File
 
 ##### 6. Component Props
+
+##### 7. Bring It All Together
