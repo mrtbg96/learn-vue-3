@@ -13,3 +13,5 @@ This is a Vue.js 3 course by Jeffrey from Laracasts
 ##### 4. Your First Custom Vue Component
 
 ##### 5. One Vue Component Per File
+
+##### 6. Component Props
