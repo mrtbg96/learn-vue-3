@@ -17,3 +17,7 @@ This is a Vue.js 3 course by Jeffrey from Laracasts
 ##### 6. Component Props
 
 ##### 7. Bring It All Together
+
+##### 8. Handle a Form Submission
+
+##### 9. Parent-Child State Communication
