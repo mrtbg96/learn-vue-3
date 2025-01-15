@@ -1,8 +1,8 @@
 export default {
     template: `
-        <li>
+        <li class="p-4 space-x-3">
             <input type="checkbox" v-model="assignment.complete">
-            {{ assignment.name }}
+            <span>{{ assignment.name }}</span>
         </li>
     `,
 
