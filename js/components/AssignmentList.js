@@ -14,14 +14,13 @@ export default {
             </h2>
 
             <AssignmentTags 
-                :currentTag="currentTag"
+                v-model="currentTag"
                 :tags="assignments.map(a => a.tag)"
-                @filterByTag="currentTag = $event" 
             />
 
             <ul class="border border-gray-600 divide-y divide-gray-600">
                 <AssignmentListItem 
-                    v-if="assignments.length"
+                    v-if="filteredAssignments.length"
                     v-for="assignment in filteredAssignments"
                     :assignment="assignment"
                     :key="assignment.id"
