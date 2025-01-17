@@ -25,3 +25,5 @@ This is a Vue.js 3 course by Jeffrey from Laracasts
 ##### 10. It's All So Easy
 
 ##### 11. Component Responsibility
+
+##### 12. A Deeper Look at V-Model
