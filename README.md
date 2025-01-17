@@ -21,3 +21,5 @@ This is a Vue.js 3 course by Jeffrey from Laracasts
 ##### 8. Handle a Form Submission
 
 ##### 9. Parent-Child State Communication
+
+##### 10. It's All So Easy
