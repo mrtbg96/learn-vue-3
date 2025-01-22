@@ -29,3 +29,5 @@ This is a Vue.js 3 course by Jeffrey from Laracasts
 ##### 12. A Deeper Look at V-Model
 
 ##### 13. Lifecycle Hooks, Fake APIs, and AJAX
+
+##### 14. More Flexible Components With Slots and Flags
