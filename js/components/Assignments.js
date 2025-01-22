@@ -23,13 +23,7 @@ export default {
                 'geography'
             ],
 
-            assignments: [
-                { id: 1, name: 'Read from page 24 to page 28', complete: false, tag: 'english' },
-                { id: 2, name: 'Finish Math quiz', complete: false, tag: 'math' },
-                { id: 3, name: 'Find a project idea', complete: true, tag: 'physics' },
-                { id: 4, name: 'Write a little story about yourself in English', complete: false, tag: 'english' },
-                { id: 5, name: 'Prepare a presentation for the Geography class', complete: true, tag: 'geography' },
-            ],
+            assignments: [],
         }
     },
 
@@ -40,6 +34,14 @@ export default {
                 completed: this.assignments.filter(assignment => assignment.complete),
             }
         }
+    },
+
+    created() {
+        fetch('http://localhost:3001/assignments')
+            .then(response => response.json())
+            .then(assignments => {
+                this.assignments = assignments
+            })
     },
 
     methods: {
