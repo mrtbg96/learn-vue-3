@@ -27,3 +27,5 @@ This is a Vue.js 3 course by Jeffrey from Laracasts
 ##### 11. Component Responsibility
 
 ##### 12. A Deeper Look at V-Model
+
+##### 13. Lifecycle Hooks, Fake APIs, and AJAX
