@@ -5,8 +5,10 @@ export default {
     components: { AssignmentList, AddAssignmentForm },
 
     template: `
-        <AssignmentList :assignments="filters.inProgress" title="In Progress" :needSpacing="true"></AssignmentList>
-        <AssignmentList :assignments="filters.completed" title="Completed"></AssignmentList>
+        <section class="flex gap-8">
+            <AssignmentList :assignments="filters.inProgress" title="In Progress" :needSpacing="true"></AssignmentList>
+            <AssignmentList :assignments="filters.completed" title="Completed"></AssignmentList>
+        </section>
         <div class="border border-gray-600 p-4 mt-8 space-y-4">
             <h4 class="font-bold text-center text-lg">
                 Add New Assignment

@@ -5,7 +5,7 @@ export default {
     components: { AssignmentListItem, AssignmentTags },
 
     template: `
-        <div :class="{ 'mb-10' : needSpacing }">
+        <div :class="{ 'mb-10' : needSpacing }" class="w-full">
             <h2 class="font-bold text-center mb-4">
                 {{ title }} 
                 <span class="text-sm">
